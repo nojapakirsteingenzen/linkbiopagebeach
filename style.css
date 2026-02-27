@@ -1,0 +1,353 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* OUTSIDE BACKGROUND */
+
+body{
+
+background:linear-gradient(
+135deg,
+#2c96dd,
+hsla(0, 0%, 72%, 0.5),
+#72cada
+);
+
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+
+}
+
+/* PHONE FRAME WITH IMAGE BACKGROUND */
+
+.phone-frame {
+  width: 100%;
+  max-width: 520px;
+  min-height: 950px;    /* Changed from height to min-height */
+  height: auto;         /* Allows it to expand */
+  border-radius: 35px;
+  position: relative;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps background steady as frame grows */
+  box-shadow:
+    0 0 0 10px rgba(0,0,0,0.2),
+    0 25px 60px rgba(0,0,0,0.4);
+  margin: 40px 0;       /* Adds space at top/bottom when frame is long */
+}
+
+
+/* TOP BAR */
+
+.top-bar{
+position:absolute;
+top:15px;
+left:15px;
+right:15px;
+display:flex;
+justify-content:space-between;
+
+z-index:10;
+
+}
+
+.top-right{
+
+display:flex;
+gap:10px;
+
+}
+
+.icon-btn{
+
+width:42px;
+height:42px;
+border-radius:50%;
+border:none;
+background:white;
+box-shadow:0 4px 10px rgba(0,0,0,0.25);
+cursor:pointer;
+font-size:18px;
+transition:0.25s;
+}
+
+.icon-btn:hover{
+
+transform:scale(1.15);
+
+}
+
+/* BANNER */
+
+.banner{
+height:190px;
+background:transparent;
+}
+
+/* PROFILE */
+
+.profile{
+
+width:130px;
+height:130px;
+
+border-radius:50%;
+
+position:absolute;
+
+top:80px;
+left:50%;
+
+transform:translateX(-50%);
+
+border:4px solid white;
+
+z-index:5;
+
+}
+
+/* CONTENT */
+
+.content{
+background: rgba(243, 238, 238, 0); /* transparency */
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(0px);
+
+padding-top:20px;
+padding-bottom:20px;
+
+text-align:center;
+
+}
+
+/* USERNAME */
+
+.username {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+/* BIO */
+
+.bio {
+  font-size: 18px;
+  margin: 10px 30px 18px;
+  text-align: center;
+  line-height: 1.5;
+  color: #111;
+}
+/* INSTAGRAM ICON */
+
+.instagram {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 45px;
+  margin: 15px auto;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 5px 15px rgba(192, 50, 50, 0.315);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.25s;
+  text-decoration: none;
+}
+
+.instagram:hover {
+  transform: scale(1.15);
+}
+
+
+
+/* SCROLLABLE LINKS AREA */
+
+.links{
+
+margin-top:10px;
+
+padding:15px 25px;
+
+display:flex;
+flex-direction:column;
+
+gap:18px;
+
+
+}
+
+/* HIDE SCROLLBAR */
+
+.links::-webkit-scrollbar{
+
+width:0;
+
+}
+
+.links{
+
+scrollbar-width:none;
+
+}
+
+/* LINK CARD */
+
+.link-card{
+
+background:white;
+
+padding:28px;
+
+border-radius:35px;
+
+text-decoration:none;
+
+color:black;
+
+border:2px solid black;
+
+box-shadow:6px 8px 0px black;
+
+font-size:16px;
+
+position:relative;
+
+transition:0.25s;
+
+}
+
+/* DOTS */
+
+.dots{
+
+position:absolute;
+
+right:15px;
+top:50%;
+
+transform:translateY(-50%);
+
+}
+
+/* HOVER */
+
+.link-card:hover{
+
+transform:translateY(-6px) scale(1.05);
+
+box-shadow:
+10px 14px 0px black,
+0 15px 30px rgba(0,0,0,0.3);
+
+background:#e0f2fe;
+
+}
+
+/* CLICK */
+
+.links {
+  padding: 20px 25px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.link-card {
+  background: white;
+  padding: 18px;
+  border-radius: 35px;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  box-shadow: 6px 8px 0 black;
+  font-size: 16px;
+  position: relative;
+  transition: 0.25s;
+}
+
+.dots {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.link-card:hover {
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 10px 14px 0 black;
+}
+
+/* ===============================
+   JOIN BUTTON
+================================ */
+.join-btn {
+  margin: 25px auto 0;
+  padding: 16px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.join-btn:hover {
+  transform: scale(1.08);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.custom-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #222;
+}
+
+.footer-subtext {
+  font-size: 12px;
+  color: #444;
+  margin-top: 5px;
+}
+#qr-container {
+  position: fixed;   
+  bottom: 50px;     
+  right: 50px;       
+  text-align: center;
+  z-index: 999;      
+}
+
+#qr-container p {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(41, 7, 7);     
+  margin-bottom: 8px;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+}
+
+#qrcode img {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* Slight border for visibility */
+  border-radius: 8px;
+}
+
+/* Hide on mobile devices since it's only for desktop viewing */
+@media (max-width: 900px) {
+  #qr-container {
+    display: none;
+  }
+}
